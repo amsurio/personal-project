@@ -1,0 +1,38 @@
+@import '../../styles/styles.scss';
+@import '../../styles/styles.scss';
+
+.header{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text;
+
+    .headerLeftSide{
+        display: flex;
+        align-items: center;
+        h3{
+            margin-right: 30px;
+            font-family: 'Lato-italic';
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        
+    }
+
+    .headerRightSide{
+        display: flex;
+        align-items: center;
+
+        .icon:hover{
+            cursor: pointer;
+            
+            &:first-child{
+                color: $heart;
+            }
+        }
+    }
+}

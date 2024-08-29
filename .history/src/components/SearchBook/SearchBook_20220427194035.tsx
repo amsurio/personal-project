@@ -1,0 +1,35 @@
+import React, { FC, useState } from 'react';
+import { DashCircleDotted, Search } from 'react-bootstrap-icons';
+import style from './SearchBook.module.scss'
+
+type SearchBookType = {
+    searchBook: string
+    setSearchBook: (searchBook: string) => void
+}
+
+const SearchBook: FC<SearchBookType> = ({ searchBook, setSearchBook }) => {
+    return (
+        <div className={style.container}>
+            <h2 className={style.leftText}>{searchBook ? `Шукаємо: '${searchBook}'` : 'Усі Книги'}</h2>
+            <div className={style.searchBookBlock}>
+                <Search />
+
+                <input className={style.bookNameValue}
+                    onChange={(e) => {
+                        setSearchBook(e.target.value);
+                    }}
+                    value={searchBook}
+                    placeholder="Пошук..."
+                />
+                {searchBook ? (
+                    <DashCircleDotted
+                        onClick={() => setSearchBook('')}
+                        className={style.clearSearchBtn}
+                    />
+                ) : null}
+            </div>
+        </div>
+    );
+};
+
+export default SearchBook;

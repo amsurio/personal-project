@@ -1,0 +1,18 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .carouselHeadText{
+        position: absolute;
+        text-align: center;
+    }
+}

@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px 0px 60px;
+
+    .leftText{
+        font-family: 'Monserat';
+    }
+  
+    .searchBookBlock {
+      position: relative;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      background-color: $white;
+      border-radius: 14px;
+      .clearSearchBtn {
+        position: absolute;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+      }
+      .bookNameValue {
+        padding: 14px;
+        font-size: 16px;
+        width: 200px;
+      }
+    }
+  }
+  @media screen and (max-width: 992px){
+    .container {
+      padding: 30px 60px 0px 60px;
+  
+      .leftText{
+          font-size:24px ;
+      }
+    
+      .searchBookBlock {
+        padding: 0 10px;
+        .clearSearchBtn {
+          width: 20px;
+          height: 20px;
+
+        }
+        .bookNameValue {
+          padding: 10px;
+          font-size: 16px;
+          width: 200px;
+        }
+      }
+    }
+}
+
+
+//Tablet 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px 50px 0px 50px;
+
+    .leftText{
+        font-size:20px ;
+    }
+  
+    .searchBookBlock {
+      padding: 0 10px;
+      .clearSearchBtn {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+      .bookNameValue {
+        padding: 8px;
+        font-size: 14px;
+        width: 180px;
+      }
+    }
+  }
+}
+
+//Phone
+@media screen and (max-width: 600px){
+  .container {
+    padding: 15px 40px 0px 40px;
+
+    .leftText{
+        font-size:16px ;
+    }
+  
+    .searchBookBlock {
+      padding: 0 8px;
+      .clearSearchBtn {
+        width: 14px;
+        height: 14px;
+      }
+      .bookNameValue {
+        padding: 5px;
+        font-size: 12px;
+        width: 150px;
+      }
+    }
+  }
+}
